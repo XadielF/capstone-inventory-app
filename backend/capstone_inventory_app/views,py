@@ -1,9 +1,9 @@
-# def de funciones que manejan los http requests
-# y retorna los http responses correspondientes
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404
 from .models import Propiedad, Usuario
 from django.db import models
+# def de funciones que manejan los http requests
+# y retorna los http responses correspondientes
 
 
 # views para las propiedades
