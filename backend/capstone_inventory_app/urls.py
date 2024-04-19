@@ -15,8 +15,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/', include('capstone_inventory_app.urls')),
+    path('propiedades/', views.propiedad_list, name='propiedad_list'),  # URL pattern for listing properties
+    path('propiedades/<int:pk>/', views.propiedad_detail, name='propiedad_detail'),  # URL pattern for retrieving property details
+    path('usuarios/<int:pk>/', views.usuario_list, name='usuario_list'),  # URL pattern for listing users
 ]
